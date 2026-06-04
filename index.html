@@ -1,0 +1,2988 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Panadería en Casa — Alejo Sierra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     PÍXEL DE META — CÓDIGO BASE
+     Instalado en el <head> para registrar PageView en TODAS las páginas.
+     ⚠️ ID del Pixel: 1480862153821257 — instalado correctamente.
+     ============================================================ -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '1480862153821257');
+  fbq('track', 'PageView');     // Registra cada visita automáticamente
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1480862153821257&ev=PageView&noscript=1"/>
+</noscript>
+<!-- ============================================================
+     FIN PÍXEL DE META — CÓDIGO BASE
+     ============================================================ -->
+
+<style>
+
+  :root {
+
+    --cream: #F5EDD6;
+
+    --warm-white: #FDF8F0;
+
+    --brown-dark: #2C1A0E;
+
+    --brown-mid: #6B3F1F;
+
+    --brown-light: #A0622A;
+
+    --gold: #D4970A;
+
+    --gold-light: #F2C14E;
+
+    --rust: #C0440A;
+
+    --green-hotmart: #00B86E;
+
+    --text-main: #1E0F05;
+
+    --text-muted: #6B5040;
+
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+
+    font-family: 'DM Sans', sans-serif;
+
+    background: var(--warm-white);
+
+    color: var(--text-main);
+
+    overflow-x: hidden;
+
+  }
+
+  /* ── CURRENCY TOGGLE ── */
+
+  .currency-bar {
+
+    background: var(--brown-dark);
+
+    padding: 10px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 13px;
+
+    color: var(--gold-light);
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+  }
+
+  .currency-toggle {
+
+    display: flex;
+
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+  }
+
+  .currency-toggle button {
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--cream);
+
+    padding: 4px 14px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-weight: 600;
+
+    transition: all 0.2s;
+
+    border-radius: 20px;
+
+  }
+
+  .currency-toggle button.active {
+
+    background: var(--gold);
+
+    color: var(--brown-dark);
+
+  }
+
+  /* ── URGENCY TOP BAR ── */
+
+  .urgency-bar {
+
+    background: var(--rust);
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 10px 20px;
+
+    font-size: clamp(11px, 2.5vw, 13px);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+    position: relative;
+
+    z-index: 99;
+
+  }
+
+  /* ── HERO / VIDEO ── */
+
+  .hero {
+
+    position: relative;
+
+    min-height: unset;
+
+    background: linear-gradient(160deg, var(--brown-dark) 0%, #3d1f0a 50%, #1a0c04 100%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    padding: 20px 20px 20px;
+
+  }
+
+  .hero::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(ellipse at 70% 30%, rgba(212,151,10,0.18) 0%, transparent 60%),
+
+                radial-gradient(ellipse at 20% 80%, rgba(192,68,10,0.15) 0%, transparent 50%);
+
+  }
+
+  .grain {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.04;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+
+    background-size: 200px;
+
+    pointer-events: none;
+
+  }
+
+  .hero-badge {
+
+    background: rgba(212,151,10,0.2);
+
+    border: 1px solid rgba(212,151,10,0.5);
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    padding: 6px 18px;
+
+    border-radius: 30px;
+
+    margin-bottom: 28px;
+
+    position: relative;
+
+    animation: fadeDown 0.8s ease both;
+
+  }
+
+  .hero h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(3rem, 8vw, 7rem);
+
+    font-weight: 900;
+
+    color: var(--cream);
+
+    text-align: center;
+
+    line-height: 1;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    animation: fadeDown 0.9s ease 0.1s both;
+
+  }
+
+  .hero h1 em {
+
+    font-style: italic;
+
+    color: var(--gold-light);
+
+  }
+
+  .hero-sub {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+
+    color: rgba(245,237,214,0.65);
+
+    letter-spacing: 5px;
+
+    text-align: center;
+
+    margin-bottom: 16px;
+
+    animation: fadeDown 1s ease 0.2s both;
+
+  }
+
+  .video-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 860px;
+
+    aspect-ratio: 16/9;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,151,10,0.25);
+
+    margin-bottom: 20px;
+
+    animation: fadeUp 1.1s ease 0.3s both;
+
+    background: #000;
+
+  }
+
+  .video-wrapper iframe {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+  }
+
+  .hero-cta-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 16px;
+
+    animation: fadeUp 1s ease 0.5s both;
+
+  }
+
+  .btn-primary {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: linear-gradient(135deg, var(--gold) 0%, #e8a80b 100%);
+
+    color: var(--brown-dark);
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 17px;
+
+    letter-spacing: 0.3px;
+
+    padding: 18px 48px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    border: none;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 32px rgba(212,151,10,0.45), 0 2px 8px rgba(0,0,0,0.2);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    position: relative;
+
+    overflow: hidden;
+
+  }
+
+  .btn-primary::after {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, transparent 60%);
+
+    border-radius: inherit;
+
+  }
+
+  .btn-primary:hover {
+
+    transform: translateY(-3px) scale(1.02);
+
+    box-shadow: 0 16px 48px rgba(212,151,10,0.55), 0 4px 12px rgba(0,0,0,0.25);
+
+  }
+
+  .hero-price-hint {
+
+    color: rgba(245,237,214,0.6);
+
+    font-size: 13px;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+  }
+
+  .hero-price-hint strong {
+
+    color: var(--gold-light);
+
+  }
+
+  .scroll-arrow {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    animation: bounce 2s ease-in-out infinite;
+
+    opacity: 0.5;
+
+  }
+
+  /* ── SOCIAL PROOF BAR ── */
+
+  .proof-bar {
+
+    background: var(--cream);
+
+    border-bottom: 1px solid rgba(107,63,31,0.15);
+
+    padding: 22px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: clamp(24px, 5vw, 80px);
+
+    flex-wrap: wrap;
+
+  }
+
+  .proof-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 2px;
+
+  }
+
+  .proof-number {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 2rem;
+
+    color: var(--brown-mid);
+
+    line-height: 1;
+
+  }
+
+  .proof-label {
+
+    font-size: 11px;
+
+    color: var(--text-muted);
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    font-weight: 500;
+
+  }
+
+  .proof-divider {
+
+    width: 1px;
+
+    height: 40px;
+
+    background: rgba(107,63,31,0.2);
+
+    align-self: center;
+
+  }
+
+  /* ── SECTIONS ── */
+
+  section {
+
+    padding: 90px 20px;
+
+  }
+
+  .container {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+  }
+
+  .section-tag {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+
+    margin-bottom: 12px;
+
+    display: block;
+
+  }
+
+  .section-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    font-weight: 900;
+
+    color: var(--brown-dark);
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+  }
+
+  .section-title em {
+
+    font-style: italic;
+
+    color: var(--brown-light);
+
+  }
+
+  .section-body {
+
+    font-size: 16.5px;
+
+    line-height: 1.8;
+
+    color: var(--text-muted);
+
+    max-width: 640px;
+
+  }
+
+  /* ── BIO SECTION ── */
+
+  .bio-section {
+
+    background: var(--warm-white);
+
+  }
+
+  .bio-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+  }
+
+  .bio-img-wrap {
+
+    position: relative;
+
+  }
+
+  .bio-img-wrap::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: -14px -14px 14px 14px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 12px;
+
+    opacity: 0.35;
+
+  }
+
+  .bio-img {
+
+    width: 100%;
+
+    aspect-ratio: 3/4;
+
+    border-radius: 10px;
+
+    background: linear-gradient(145deg, #c8885a 0%, #8b4513 40%, #5c2a0a 100%);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+  }
+
+  .bio-img-inner {
+
+    font-size: 90px;
+
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+
+  }
+
+  .bio-img-label {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    right: 20px;
+
+    background: rgba(44,26,14,0.85);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 8px;
+
+    padding: 12px 16px;
+
+    border: 1px solid rgba(212,151,10,0.3);
+
+  }
+
+  .bio-img-label strong {
+
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 18px;
+
+    color: var(--cream);
+
+    font-style: italic;
+
+  }
+
+  .bio-img-label span {
+
+    font-size: 11px;
+
+    color: var(--gold-light);
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+  }
+
+  .bio-text blockquote {
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: 22px;
+
+    color: var(--brown-dark);
+
+    border-left: 3px solid var(--gold);
+
+    padding-left: 20px;
+
+    margin: 28px 0;
+
+    line-height: 1.5;
+
+  }
+
+  .social-links {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 28px;
+
+    flex-wrap: wrap;
+
+  }
+
+  .social-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 16px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    letter-spacing: 0.5px;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+  }
+
+  .social-btn:hover { transform: translateY(-2px); }
+
+  .sb-fb { background: #1877F2; color: #fff; }
+
+  .sb-ig { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+
+  .sb-yt { background: #FF0000; color: #fff; }
+
+  .sb-tt { background: var(--brown-dark); color: var(--cream); }
+
+  .sb-icon { font-size: 15px; }
+
+  /* ── WHAT YOU'LL LEARN ── */
+
+  .learn-section {
+
+    background: var(--cream);
+
+  }
+
+  /* ── LESSON VIDEO BOX ── */
+
+  .lesson-video-wrap {
+
+    max-width: 860px;
+
+    margin: 0 auto 50px;
+
+  }
+
+  .lesson-video-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+
+  }
+
+  .lesson-video-label .lesson-tag {
+
+    background: var(--gold);
+
+    color: var(--brown-dark);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    padding: 5px 14px;
+
+    border-radius: 30px;
+
+  }
+
+  .lesson-video-label .lesson-title-text {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: var(--brown-dark);
+
+    font-style: italic;
+
+  }
+
+  .lesson-video-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16/9;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(107,63,31,0.22), 0 0 0 1px rgba(212,151,10,0.3);
+
+    background: #1a0c04;
+
+  }
+
+  .lesson-video-inner iframe {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+  }
+
+  .modules-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+
+    gap: 22px;
+
+    margin-top: 0;
+
+  }
+
+  .module-card {
+
+    background: var(--warm-white);
+
+    border-radius: 14px;
+
+    padding: 28px 26px;
+
+    border: 1px solid rgba(160,98,42,0.15);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+  }
+
+  .module-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 20px 50px rgba(107,63,31,0.12);
+
+  }
+
+  .module-card::before {
+
+    content: attr(data-num);
+
+    position: absolute;
+
+    top: -10px;
+
+    right: 16px;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 80px;
+
+    color: rgba(107,63,31,0.06);
+
+    line-height: 1;
+
+  }
+
+  .module-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+
+  .module-title {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: var(--brown-dark);
+
+    margin-bottom: 10px;
+
+  }
+
+  .module-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+
+  /* ── BONUS SECTION ── */
+
+  .bonus-section {
+
+    background: linear-gradient(135deg, #1e0f05 0%, #2c1a0e 100%);
+
+    color: #fff;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-top: 4px solid var(--gold);
+
+    border-bottom: 4px solid var(--gold);
+
+  }
+
+  .bonus-section::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(circle at top right, rgba(212,151,10,0.15), transparent 60%);
+
+    pointer-events: none;
+
+  }
+
+  .bonus-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    margin-top: 45px;
+
+  }
+
+  .bonus-card {
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px dashed rgba(212, 151, 10, 0.4);
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    position: relative;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+
+  }
+
+  .bonus-badge {
+
+    position: absolute;
+
+    top: -15px;
+
+    left: 30px;
+
+    background: var(--gold);
+
+    color: var(--brown-dark);
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    padding: 6px 18px;
+
+    border-radius: 30px;
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 4px 10px rgba(212,151,10,0.3);
+
+  }
+
+  .bonus-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 24px;
+
+    margin-top: 20px;
+
+  }
+
+  .bonus-item {
+
+    background: rgba(255,255,255,0.02);
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    border-radius: 12px;
+
+    padding: 24px;
+
+    transition: transform 0.2s;
+
+  }
+
+  .bonus-item:hover {
+
+    transform: scale(1.02);
+
+    background: rgba(255,255,255,0.04);
+
+  }
+
+  .bonus-item h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 20px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+  }
+
+  .bonus-item p {
+
+    font-size: 14.5px;
+
+    color: rgba(255,255,255,0.7);
+
+    line-height: 1.6;
+
+  }
+
+  /* ── CHALLENGE SECTION ── */
+
+  .challenge-section {
+
+    background: var(--brown-dark);
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+
+  }
+
+  .challenge-section::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(ellipse at center, rgba(212,151,10,0.12) 0%, transparent 65%);
+
+  }
+
+  .challenge-section .section-title { color: var(--cream); }
+
+  .challenge-section .section-body { color: rgba(245,237,214,0.7); margin: 0 auto 40px; }
+
+  .challenge-box {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    background: rgba(245,237,214,0.05);
+
+    border: 1px solid rgba(212,151,10,0.3);
+
+    border-radius: 20px;
+
+    padding: 40px 60px;
+
+    margin-bottom: 40px;
+
+    position: relative;
+
+    z-index: 1;
+
+  }
+
+  .challenge-question {
+
+    font-family: 'Playfair Display', serif;
+
+    font-style: italic;
+
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    color: var(--cream);
+
+    line-height: 1.4;
+
+  }
+
+  .challenge-sub {
+
+    font-size: 14px;
+
+    color: var(--gold-light);
+
+    opacity: 0.8;
+
+  }
+
+  .challenge-items {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-bottom: 48px;
+
+    position: relative;
+
+    z-index: 1;
+
+  }
+
+  .challenge-item {
+
+    background: rgba(245,237,214,0.08);
+
+    border: 1px solid rgba(212,151,10,0.2);
+
+    border-radius: 8px;
+
+    padding: 14px 20px;
+
+    color: var(--cream);
+
+    font-size: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+  }
+
+  .challenge-item::before { content: '→'; color: var(--gold); font-weight: 700; }
+
+  /* ── PRICE SECTION ── */
+
+  .price-section {
+
+    background: var(--warm-white);
+
+    text-align: center;
+
+  }
+
+  .price-card {
+
+    max-width: 500px;
+
+    margin: 40px auto 0;
+
+    background: var(--cream);
+
+    border-radius: 24px;
+
+    padding: 50px 40px;
+
+    border: 2px solid rgba(212,151,10,0.4);
+
+    box-shadow: 0 30px 80px rgba(107,63,31,0.12);
+
+    position: relative;
+
+    overflow: hidden;
+
+  }
+
+  .price-card::before {
+
+    content: '⏰ PREVENTA';
+
+    position: absolute;
+
+    top: 18px;
+
+    right: -30px;
+
+    background: var(--rust);
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    padding: 5px 50px;
+
+    transform: rotate(30deg);
+
+    transform-origin: center;
+
+  }
+
+  .price-label { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+
+  .price-main {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 6rem;
+
+    color: var(--brown-dark);
+
+    line-height: 1;
+
+  }
+
+  .price-currency-symbol { font-size: 2rem; vertical-align: top; margin-top: 16px; display: inline-block; }
+
+  .price-period { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+
+  .price-equivalence { font-size: 13px; color: var(--brown-light); margin-bottom: 30px; font-style: italic; }
+
+  .price-urgency-notice {
+
+    background: rgba(192, 68, 10, 0.08);
+
+    border: 1px solid rgba(192, 68, 10, 0.25);
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+
+    color: var(--rust);
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+  }
+
+  .price-includes {
+
+    list-style: none;
+
+    text-align: left;
+
+    margin-bottom: 34px;
+
+  }
+
+  .price-includes li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    color: var(--text-main);
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid rgba(107,63,31,0.08);
+
+  }
+
+  .price-includes li::before { content: '✓'; color: var(--green-hotmart); font-weight: 700; flex-shrink: 0; }
+
+  .pay-methods {
+
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    color: var(--text-muted);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+  }
+
+  .pay-badge {
+
+    background: rgba(107,63,31,0.1);
+
+    border-radius: 5px;
+
+    padding: 3px 9px;
+
+    font-weight: 600;
+
+    font-size: 11px;
+
+    color: var(--brown-mid);
+
+  }
+
+  .hotmart-btn-wrap { display: flex; justify-content: center; }
+
+  .hotmart-btn-wrap a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: var(--green-hotmart);
+
+    color: #fff;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 17px;
+
+    padding: 18px 48px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 32px rgba(0,184,110,0.4);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    width: 100%;
+
+    text-align: center;
+
+  }
+
+  .hotmart-btn-wrap a:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 14px 40px rgba(0,184,110,0.5);
+
+  }
+
+  /* ── FAQ ── */
+
+  .faq-section { background: var(--cream); }
+
+  .faq-list { max-width: 720px; margin: 50px auto 0; }
+
+  .faq-item {
+
+    border-bottom: 1px solid rgba(107,63,31,0.15);
+
+    overflow: hidden;
+
+  }
+
+  .faq-q {
+
+    width: 100%;
+
+    background: none;
+
+    border: none;
+
+    text-align: left;
+
+    padding: 22px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: var(--brown-dark);
+
+    gap: 16px;
+
+  }
+
+  .faq-icon {
+
+    width: 28px;
+
+    height: 28px;
+
+    border-radius: 50%;
+
+    background: rgba(212,151,10,0.15);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    font-size: 16px;
+
+    color: var(--gold);
+
+    transition: transform 0.3s;
+
+  }
+
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+  .faq-a {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height 0.4s ease, padding 0.3s;
+
+    font-size: 15px;
+
+    color: var(--text-muted);
+
+    line-height: 1.8;
+
+    padding: 0;
+
+  }
+
+  .faq-item.open .faq-a {
+
+    max-height: 300px;
+
+    padding-bottom: 20px;
+
+  }
+
+  /* ── FINAL CTA ── */
+
+  .final-cta {
+
+    background: linear-gradient(145deg, var(--brown-dark) 0%, #3d1f0a 100%);
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+  }
+
+  .final-cta::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background: radial-gradient(ellipse at 50% 0%, rgba(212,151,10,0.2) 0%, transparent 60%);
+
+  }
+
+  .final-cta .section-title { color: var(--cream); position: relative; }
+
+  .final-cta .section-body { color: rgba(245,237,214,0.65); margin: 0 auto 40px; text-align: center; position: relative; }
+
+  .final-price-reveal {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 3rem;
+
+    color: var(--gold-light);
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+  }
+
+  .final-urgency-countdown {
+
+    color: #ff6b6b;
+
+    font-weight: 700;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+  }
+
+  /* ── FOOTER ── */
+
+  footer {
+
+    background: #0f0704;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    color: rgba(245,237,214,0.35);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+  }
+
+  footer a { color: rgba(245,237,214,0.5); text-decoration: none; }
+
+  /* ── ANIMATIONS ── */
+
+  @keyframes fadeDown {
+
+    from { opacity: 0; transform: translateY(-20px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
+  }
+
+  @keyframes fadeUp {
+
+    from { opacity: 0; transform: translateY(30px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
+  }
+
+  @keyframes pulse {
+
+    0%, 100% { box-shadow: 0 0 0 16px rgba(212,151,10,0.15), 0 20px 40px rgba(0,0,0,0.4); }
+
+    50% { box-shadow: 0 0 0 28px rgba(212,151,10,0.08), 0 20px 40px rgba(0,0,0,0.4); }
+
+  }
+
+  @keyframes bounce {
+
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+
+    50% { transform: translateX(-50%) translateY(8px); }
+
+  }
+
+  .reveal {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition: opacity 0.7s ease, transform 0.7s ease;
+
+  }
+
+  .reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+  /* ── RESPONSIVE ── */
+
+  @media (max-width: 768px) {
+
+    .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+
+    .bio-img-wrap::before { display: none; }
+
+    .bio-img { aspect-ratio: 4/3; }
+
+    .challenge-box { padding: 28px 24px; }
+
+    .price-card { padding: 40px 24px; }
+
+    .price-main { font-size: 4.5rem; }
+
+    .proof-divider { display: none; }
+
+    .bonus-card { padding: 25px 15px; }
+
+    .video-wrapper {
+
+      aspect-ratio: 16/9;
+
+      height: auto;
+
+      max-height: 280px;
+
+    }
+
+    .video-wrapper iframe {
+
+      top: 0;
+
+      height: 100%;
+
+    }
+
+    .lesson-video-inner {
+
+      aspect-ratio: 16/9;
+
+      height: auto;
+
+      max-height: 280px;
+
+    }
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CURRENCY BAR -->
+
+<div class="currency-bar">
+
+  <span>💰 Ver precios en:</span>
+
+  <div class="currency-toggle">
+
+    <button class="active" id="btn-cop" onclick="setCurrency('COP')">COP $</button>
+
+    <button id="btn-usd" onclick="setCurrency('USD')">USD $</button>
+
+  </div>
+
+  <span id="currency-note">Precios en pesos colombianos</span>
+
+</div>
+
+<!-- URGENCY TIMER BAR -->
+
+<div class="urgency-bar">
+
+  🚨 ¡ATENCIÓN! ÚLTIMOS DÍAS DE PREVENTA: El 10 de junio el curso subirá a <span id="urgency-bar-price">$100.000 COP</span>
+
+</div>
+
+<!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+
+<section class="hero">
+
+  <div class="grain"></div>
+
+  <div class="hero-badge">🏅 +200.000 seguidores — Alejo Sierra</div>
+
+  <h1>Panadería<br><em>en Casa</em></h1>
+
+  <div class="hero-sub">El Curso con Alejo Sierra</div>
+
+  <div class="video-wrapper">
+
+    <iframe id="vimeo-player" src="https://player.vimeo.com/video/1193475745?autoplay=1&muted=1&loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Presentación"></iframe>
+
+  </div>
+
+  <script>
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'https://player.vimeo.com/api/player.js';
+      script.onload = function() {
+        var el = document.getElementById('vimeo-player');
+        if (el && window.Vimeo) {
+          var player = new Vimeo.Player(el);
+          player.on('play', function() { player.setVolume(1); });
+        }
+      };
+      document.head.appendChild(script);
+    })();
+  </script>
+
+  <div class="hero-cta-area">
+
+    <!-- ============================================================
+         PÍXEL DE META — EVENTO: InitiateCheckout
+         Se dispara cuando el usuario hace clic en "Comprar curso" (Hero).
+         Indica intención de compra → Meta lo usa para optimizar anuncios.
+         ============================================================ -->
+    <a href="https://pay.hotmart.com/K105687770B?checkoutMode=2"
+       class="btn-primary"
+       target="_blank"
+       rel="noopener"
+       onclick="fbq('track', 'InitiateCheckout', {
+         content_name: 'Panadería en Casa — Alejo Sierra',
+         content_category: 'Curso online',
+         value: currentCurrency === 'COP' ? 70000 : 17,
+         currency: currentCurrency
+       });">
+
+      🍞 Comprar curso
+
+    </a>
+    <!-- FIN PÍXEL — InitiateCheckout Hero -->
+
+    <span class="hero-price-hint">
+
+      Solo <strong id="hero-price">$70.000 COP</strong> · Acceso de por vida<br>
+
+      <span style="color: var(--rust); font-weight: bold;">⚠️ Sube a <span id="hero-next-price">$100.000 COP</span> el 10 de Junio</span>
+
+    </span>
+
+  </div>
+
+  <div class="scroll-arrow">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(245,237,214,0.6)" stroke-width="2">
+
+      <path d="M7 10l5 5 5-5"/>
+
+    </svg>
+
+  </div>
+
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+
+<div class="proof-bar">
+
+  <div class="proof-item">
+
+    <span class="proof-number">200K+</span>
+
+    <span class="proof-label">Seguidores</span>
+
+  </div>
+
+  <div class="proof-divider"></div>
+
+  <div class="proof-item">
+
+    <span class="proof-number">4</span>
+
+    <span class="proof-label">Redes sociales</span>
+
+  </div>
+
+  <div class="proof-divider"></div>
+
+  <div class="proof-item">
+
+    <span class="proof-number">100%</span>
+
+    <span class="proof-label">Práctico</span>
+
+  </div>
+
+  <div class="proof-divider"></div>
+
+  <div class="proof-item">
+
+    <span class="proof-number">∞</span>
+
+    <span class="proof-label">Acceso de por vida</span>
+
+  </div>
+
+</div>
+
+<!-- ══════════════════════════════ BIO ══════════════════════════════ -->
+
+<section class="bio-section">
+
+  <div class="container">
+
+    <div class="bio-grid reveal">
+
+      <div class="bio-img-wrap">
+
+        <div class="bio-img">
+
+          <div class="bio-img-inner">🍞</div>
+
+          <div class="bio-img-label">
+
+            <strong>Alejo Sierra</strong>
+
+            <span>Mentor Panadero</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="bio-text">
+
+        <span class="section-tag">¿Quién te va a guiar?</span>
+
+        <h2 class="section-title">Tu mentor<br><em>Alejo Sierra</em></h2>
+
+        <p class="section-body">
+
+          Hay personas que encuentran su propósito en las cosas simples y profundas de la vida. Para Alejo Sierra, ese proposito lo ha conseguido gracias a un esfuerzo continuo.
+
+        </p>
+
+        <blockquote>
+
+          "Alejo no enseña recetas, enseña a conectar con algo que todos tenemos a la mano."
+
+        </blockquote>
+
+        <p class="section-body">
+
+          Lo que comenzó como una curiosidad por la panadería, la creación de contenido y la superación personal, se convirtió en una vocación que hoy inspira a miles en toda Latinoamérica. Su misión es llevarte de la mano, y compartir el conocimiento desde la experiencia.
+
+        </p>
+
+        <div class="social-links">
+
+          <a href="https://www.facebook.com/share/1BWBDs3ifH/?mibextid=wwXIfr" target="_blank" class="social-btn sb-fb">
+
+            <span class="sb-icon">📘</span> Facebook
+
+          </a>
+
+          <a href="https://www.instagram.com/alejosierrra?igsh=MWw5a3FraHVibXc5cQ%3D%3D&utm_source=qr" target="_blank" class="social-btn sb-ig">
+
+            <span class="sb-icon">📸</span> Instagram
+
+          </a>
+
+          <a href="https://youtube.com/@alejosierras?si=EjebdUdNz2WYcTU0" target="_blank" class="social-btn sb-yt">
+
+            <span class="sb-icon">▶</span> YouTube
+
+          </a>
+
+          <a href="https://www.tiktok.com/@alejosierrass?_r=1&_t=ZS-96QQdOLa28j" target="_blank" class="social-btn sb-tt">
+
+            <span class="sb-icon">🎵</span> TikTok
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ LEARN ══════════════════════════════ -->
+
+<section class="learn-section">
+
+  <div class="container">
+
+    <div class="reveal" style="text-align:center; margin-bottom: 40px;">
+
+      <span class="section-tag">Contenido del curso</span>
+
+      <h2 class="section-title" style="margin:0 auto;">Lo que vas a <em>dominar</em></h2>
+
+    </div>
+
+    <!-- CLASE #1 VIDEO BOX -->
+
+    <div class="lesson-video-wrap reveal">
+
+      <div class="lesson-video-label">
+
+        <span class="lesson-tag">Clase #1</span>
+
+        <span class="lesson-title-text">Vista previa gratuita</span>
+
+      </div>
+
+      <!-- ============================================================
+           PÍXEL DE META — EVENTO: ViewContent
+           Se dispara cuando la clase preview entra en pantalla (scroll reveal).
+           Indica que el usuario vio contenido del curso → señal de interés.
+           Se activa desde el observer de scroll (ver JS más abajo).
+           ============================================================ -->
+      <div class="lesson-video-inner" id="lesson-preview-video">
+
+        <iframe src="https://player.vimeo.com/video/1197023486" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Clase #1"></iframe>
+
+      </div>
+      <!-- FIN PÍXEL — ViewContent -->
+
+    </div>
+
+    <div class="modules-grid">
+
+      <div class="module-card reveal" data-num="01">
+
+        <span class="module-icon">🤲</span>
+
+        <h3 class="module-title">Masa Hojaldre Base</h3>
+
+        <p class="module-desc">Domina desde cero la preparación y el plegado técnico de la masa hojaldre perfecta, logrando capas crujientes y alveoladas.</p>
+
+      </div>
+
+      <div class="module-card reveal" data-num="02">
+
+        <span class="module-icon">🥐</span>
+
+        <h3 class="module-title">Clásicos Horneados</h3>
+
+        <p class="module-desc">Aprende la técnica exacta para dar forma y hornear espectaculares pan hojaldre, croissants perfectos y mariposas hojaldradas.</p>
+
+      </div>
+
+      <div class="module-card reveal" data-num="03">
+
+        <span class="module-icon">🥖</span>
+
+        <h3 class="module-title">Explora tu creatividad</h3>
+
+        <p class="module-desc">Prepara los tradicionales palitos de queso crujientes por fuera y suaves por dentro, junto con delicados corazones de hojaldre.</p>
+
+      </div>
+
+      <div class="module-card reveal" data-num="04">
+
+        <span class="module-icon">🍫</span>
+
+        <h3 class="module-title">Pan Dulce</h3>
+
+        <p class="module-desc">Aprende a elaborar pan comun, el de todos los dias.</p>
+
+      </div>
+
+      <div class="module-card reveal" data-num="05">
+
+        <span class="module-icon">🍪</span>
+
+        <h3 class="module-title">Repostería Tradicional</h3>
+
+        <p class="module-desc">Elabora un delicioso ponqué envinado tradicional, galletas polvorosas con esa textura que se deshace en la boca y galletas de avena nutritivas.</p>
+
+      </div>
+
+      <div class="module-card reveal" data-num="06">
+
+        <span class="module-icon">📈</span>
+
+        <h3 class="module-title">Marca Personal & Bonus</h3>
+
+        <p class="module-desc">Recibe actualizaciones de nuevas recetas gratis cada semana. Además, aprende cómo emprender en redes sociales para crear tu propia marca personal.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ BONUS EXTRA SECTION ══════════════════════════════ -->
+
+<section class="bonus-section">
+
+  <div class="container">
+
+    <div class="reveal" style="text-align: center;">
+
+      <span class="section-tag" style="color: var(--gold-light);">¡APRENDE Y EMPRENDE!</span>
+
+      <h2 class="section-title" style="color: #fff; margin: 0 auto;">Sesiones en vivo <em>totalmente gratis</em></h2>
+
+      <p style="color: rgba(255,255,255,0.7); max-width: 650px; margin: 15px auto 0; font-size: 16.5px; line-height: 1.8;">
+
+        Al comprar tu curso hoy, aseguras tu acceso exclusivo a nuestro programa de mentorías en directo para potenciar tu marca y convertir tu pasión en una marca personal.
+
+      </p>
+
+    </div>
+
+    <div class="bonus-grid reveal">
+
+      <div class="bonus-card">
+
+        <div class="bonus-badge">🎁 Curso Extra de Regalo</div>
+
+        <div class="bonus-list">
+
+          <div class="bonus-item">
+
+            <h4>📱 Edición de Videos para Redes</h4>
+
+            <p>Descubre cómo grabar, editar y estructurar videos atractivos utilizando solo tu celular. Domina la edición rápida que retiene la atención del publico.</p>
+
+          </div>
+
+          <div class="bonus-item">
+
+            <h4>🤖 Inteligencia Artificial Creativa</h4>
+
+            <p>Aprende a usar herramientas de IA para idear contenido en segundos.</p>
+
+          </div>
+
+          <div class="bonus-item">
+
+            <h4>📢 Publicidad para tu Negocio</h4>
+
+            <p>Tácticas prácticas para crear y potenciar tu marca.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ CHALLENGE ══════════════════════════════ -->
+
+<section class="challenge-section">
+
+  <div class="container">
+
+    <div class="reveal" style="position:relative; z-index:1;">
+
+      <span class="section-tag" style="color:var(--gold-light);">Un reto para ti</span>
+
+      <h2 class="section-title" style="color:var(--cream); text-align:center;">¿Cuánto tiempo llevas<br><em>pensando en hacerlo?</em></h2>
+
+      <p class="section-body" style="margin:0 auto 40px; text-align:center;"></p>
+
+      <div style="display:flex; justify-content:center;">
+
+        <div class="challenge-box">
+
+          <div class="challenge-question">
+
+            "No es sobre las ideas<br>sino sobre hacer que estas se vuelvan realidad"
+
+          </div>
+
+          <div class="challenge-sub">—- Scott Belsky </div>
+
+        </div>
+
+      </div>
+
+      <div class="challenge-items">
+
+        <div class="challenge-item">Sin experiencia previa necesaria</div>
+
+        <div class="challenge-item">Con los ingredientes de tu cocina</div>
+
+        <div class="challenge-item">A tu propio ritmo</div>
+
+        <div class="challenge-item">Con el apoyo de Alejo y la comunidad</div>
+
+        <div class="challenge-item">Desde cualquier dispositivo</div>
+
+      </div>
+
+      <div style="display:flex; justify-content:center; position:relative; z-index:1;">
+
+        <!-- ============================================================
+             PÍXEL DE META — EVENTO: InitiateCheckout (botón Challenge)
+             ============================================================ -->
+        <a href="https://pay.hotmart.com/K105687770B?checkoutMode=2"
+           class="btn-primary"
+           target="_blank"
+           rel="noopener"
+           onclick="fbq('track', 'InitiateCheckout', {
+             content_name: 'Panadería en Casa — Alejo Sierra',
+             content_category: 'Curso online',
+             value: currentCurrency === 'COP' ? 70000 : 17,
+             currency: currentCurrency
+           });">
+
+          🔥 Comprar curso
+
+        </a>
+        <!-- FIN PÍXEL — InitiateCheckout Challenge -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ PRICE ══════════════════════════════ -->
+
+<section class="price-section">
+
+  <div class="container">
+
+    <span class="section-tag reveal">Inversión en ti</span>
+
+    <h2 class="section-title reveal">El tiempo más <em>valioso</em><br>es el que inviertes en ti mismo</h2>
+
+    <div class="price-card reveal">
+
+      <div class="price-label">PRECIO DEL CURSO COMPLETO</div>
+
+      <div class="price-main">
+
+        <span class="price-currency-symbol" id="price-symbol">$</span><span id="price-amount">70.000</span>
+
+      </div>
+
+      <div class="price-period" id="price-currency-label">Pesos colombianos (COP)</div>
+
+      <div class="price-equivalence" id="price-equiv">≈ USD $17 · Pago único, sin mensualidades</div>
+
+      <div class="price-urgency-notice">
+
+        ⚠️ <strong>AVISO IMPORTANTE:</strong> Esta tarifa de preventa vence el <strong> 10 de Junio</strong>. Posterior a esta fecha el costo ascenderá de forma definitiva a <strong id="price-next-reveal">$100.000 COP (USD $25)</strong>.
+
+      </div>
+
+      <ul class="price-includes">
+
+        <li>Acceso completo e inmediato a todos los módulos</li>
+
+        <li>Acceso de por vida — sin fecha de vencimiento</li>
+
+        <li><strong>NUEVO:</strong> Curso extra con sesiones en vivo gratuitas (Videos, IA y Publicidad)</li>
+
+        <li>Actualizaciones del curso y nuevas recetas gratuitas</li>
+
+        <li>Comunidad activa de estudiantes</li>
+
+        <li>Certificado de finalización</li>
+
+        <li>Garantía de satisfacción 7 días</li>
+
+        <li>Ver desde celular, tablet o computador</li>
+
+        <li>Con la compra de este curso motivas a alejo sierra para que continue compartiendo el conocimiento y creando contenido de valor para mas personas</li>
+
+      </ul>
+
+      <!-- ============================================================
+           PÍXEL DE META — EVENTO: InitiateCheckout (botón principal Price)
+           Botón más importante de la página: tarjeta de precio.
+           ============================================================ -->
+      <div class="hotmart-btn-wrap">
+
+        <a href="https://pay.hotmart.com/K105687770B?checkoutMode=2"
+           target="_blank"
+           rel="noopener"
+           onclick="fbq('track', 'InitiateCheckout', {
+             content_name: 'Panadería en Casa — Alejo Sierra',
+             content_category: 'Curso online',
+             value: currentCurrency === 'COP' ? 70000 : 17,
+             currency: currentCurrency
+           });">
+
+          🛒 Comprar curso
+
+        </a>
+
+      </div>
+      <!-- FIN PÍXEL — InitiateCheckout Price Card -->
+
+      <div class="pay-methods" style="margin-top:20px;">
+
+        <span>Métodos de pago:</span>
+
+        <span class="pay-badge">Nequi</span>
+
+        <span class="pay-badge">Tarjeta</span>
+
+        <span class="pay-badge">PSE</span>
+
+        <span class="pay-badge">Efecty</span>
+
+        <span class="pay-badge">PayPal</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ FAQ ══════════════════════════════ -->
+
+<section class="faq-section">
+
+  <div class="container">
+
+    <div class="reveal" style="text-align:center;">
+
+      <span class="section-tag">Preguntas frecuentes</span>
+
+      <h2 class="section-title">Resolvemos tus <em>dudas</em></h2>
+
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Necesito experiencia previa en panadería?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">Para nada. El curso está diseñado para comenzar desde cero. Alejo te guía paso a paso desde los conceptos más básicos hasta técnicas más avanzadas, sin asumir nada previo.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Qué pasa si compro y no me gusta?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">Tienes 7 días de garantía total. Si dentro de ese plazo sientes que el curso no era lo que esperabas, solicitas el reembolso a través de Hotmart y te devuelven el dinero sin preguntas. Sin riesgo.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Cuánto tiempo tengo para ver el contenido?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">Acceso de por vida. Una vez que te inscribes, el contenido es tuyo para siempre. Puedes avanzar a tu ritmo, pausar, retomar y revisitar cuantas veces quieras.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Cómo puedo pagar? ¿Aceptan Nequi?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">Sí, aceptamos Nequi, tarjetas de crédito y débito, PSE, Efecty, Daviplata y PayPal. La pasarela de pago de Hotmart es 100% segura y con cifrado bancario.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Desde qué dispositivo puedo ver el curso?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">Desde cualquiera: celular, tablet o computador. La plataforma Hotmart está optimizada para que veas el contenido desde donde estés, incluso sin conexión si descargas los videos.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿Voy a necesitar equipos especiales o ingredientes difíciles de conseguir?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">No. Alejo enseña con lo que tienes en casa. Horno convencional, ingredientes de supermercado. La filosofía del curso es que la panadería artesanal debe ser accesible para todos.</div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-q" onclick="toggleFaq(this)">
+
+          ¿El precio está en pesos colombianos o dólares?
+
+          <span class="faq-icon">+</span>
+
+        </button>
+
+        <div class="faq-a">El curso vale hoy $70.000 pesos colombianos (aproximadamente USD $17). Recuerda que este beneficio expira el 10 de Junio, día en que subirá a $100.000 COP (USD $25). Puedes cambiar la moneda en la barra superior.</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ FINAL CTA ══════════════════════════════ -->
+
+<section class="final-cta">
+
+  <div class="container reveal">
+
+    <span class="section-tag" style="color:var(--gold-light);">¿Qué estás esperando?</span>
+
+    <h2 class="section-title">Tu primer pan<br><em>empieza hoy</em></h2>
+
+    <p class="section-body">
+
+      Cada día que pasa es una oportunidad para aprender algo nuevo. Estamos listos para guiarte. ----¿ESTAS LISTO O LISTA?
+
+    </p>
+
+    <div class="final-price-reveal" id="final-price-reveal">Solo $70.000 COP · Acceso de por vida</div>
+
+    <div class="final-urgency-countdown" id="final-urgency-countdown">⚠️ Oportunidad única: Tarifa especial disponible antes del 10 de Junio (Luego subirá a $100.000 COP)</div>
+
+    <!-- ============================================================
+         PÍXEL DE META — EVENTO: InitiateCheckout (botón Final CTA)
+         ============================================================ -->
+    <div class="hotmart-btn-wrap" style="justify-content:center; max-width:480px; margin:0 auto;">
+
+      <a href="https://pay.hotmart.com/K105687770B?checkoutMode=2"
+         target="_blank"
+         rel="noopener"
+         style="font-size:18px; padding:20px 50px;"
+         onclick="fbq('track', 'InitiateCheckout', {
+           content_name: 'Panadería en Casa — Alejo Sierra',
+           content_category: 'Curso online',
+           value: currentCurrency === 'COP' ? 70000 : 17,
+           currency: currentCurrency
+         });">
+
+        🍞 Comprar curso
+
+      </a>
+
+    </div>
+    <!-- FIN PÍXEL — InitiateCheckout Final CTA -->
+
+    <p style="margin-top:20px; font-size:12px; color:rgba(245,237,214,0.4); position:relative;">🔒 Pago 100% seguro · 7 días de garantía · Hotmart</p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>© 2025 Alejo Sierra — Panadería en Casa · Todos los derechos reservados</p>
+
+  <p style="margin-top:6px;">
+
+    <a href="https://www.instagram.com/alejosierrra" target="_blank">Instagram</a> &nbsp;·&nbsp;
+
+    <a href="https://youtube.com/@alejosierras" target="_blank">YouTube</a> &nbsp;·&nbsp;
+
+    <a href="https://www.tiktok.com/@alejosierrass" target="_blank">TikTok</a> &nbsp;·&nbsp;
+
+    <a href="https://www.facebook.com/share/1BWBDs3ifH/" target="_blank">Facebook</a>
+
+  </p>
+
+  <p style="margin-top:10px; font-size:10px; opacity:0.5;">Curso distribuido a través de Hotmart. Los precios pueden variar según tasas de cambio.</p>
+
+</footer>
+
+<!-- HOTMART SCRIPT -->
+
+<script type="text/javascript">
+
+  function importHotmart(){
+
+    var imported = document.createElement('script');
+
+    imported.src = 'https://static.hotmart.com/checkout/widget.min.js';
+
+    document.head.appendChild(imported);
+
+    var link = document.createElement('link');
+
+    link.rel = 'stylesheet';
+
+    link.type = 'text/css';
+
+    link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+
+    document.head.appendChild(link);
+
+  }
+
+  importHotmart();
+
+</script>
+
+<script>
+
+  // ── CURRENCY & PRICING DATA ──
+
+  const COP_PRICE = 70000;
+
+  const COP_NEXT_PRICE = 100000;
+
+  const USD_PRICE = 17;
+
+  const USD_NEXT_PRICE = 25;
+
+  let currentCurrency = 'COP';
+
+  function setCurrency(currency) {
+
+    currentCurrency = currency;
+
+    document.getElementById('btn-cop').classList.toggle('active', currency === 'COP');
+
+    document.getElementById('btn-usd').classList.toggle('active', currency === 'USD');
+
+    if (currency === 'COP') {
+
+      document.getElementById('price-symbol').textContent = '$';
+
+      document.getElementById('price-amount').textContent = '70.000';
+
+      document.getElementById('price-currency-label').textContent = 'Pesos colombianos (COP)';
+
+      document.getElementById('price-equiv').textContent = '≈ USD $17 · Pago único, sin mensualidades';
+
+      document.getElementById('hero-price').textContent = '$70.000 COP';
+
+      document.getElementById('hero-next-price').textContent = '$100.000 COP';
+
+      document.getElementById('price-next-reveal').textContent = '$100.000 COP (USD $25)';
+
+      document.getElementById('currency-note').textContent = 'Precios en pesos colombianos';
+
+      document.getElementById('urgency-bar-price').textContent = '$100.000 COP';
+
+      document.getElementById('final-price-reveal').textContent = 'Solo $70.000 COP · Acceso de por vida';
+
+      document.getElementById('final-urgency-countdown').textContent = '⚠️ Oportunidad única: Tarifa especial disponible antes del 10 de Junio (Luego subirá a $100.000 COP)';
+
+    } else {
+
+      document.getElementById('price-symbol').textContent = 'US$';
+
+      document.getElementById('price-amount').textContent = '17';
+
+      document.getElementById('price-currency-label').textContent = 'Dólares americanos (USD)';
+
+      document.getElementById('price-equiv').textContent = '≈ COP $70.000 · Pago único, sin mensualidades';
+
+      document.getElementById('hero-price').textContent = 'USD $17';
+
+      document.getElementById('hero-next-price').textContent = 'USD $25';
+
+      document.getElementById('price-next-reveal').textContent = 'USD $25 (COP $100.000)';
+
+      document.getElementById('currency-note').textContent = 'Precios en dólares americanos';
+
+      document.getElementById('urgency-bar-price').textContent = 'USD $25';
+
+      document.getElementById('final-price-reveal').textContent = 'Solo USD $17 · Acceso de por vida';
+
+      document.getElementById('final-urgency-countdown').textContent = '⚠️ Oportunidad única: Tarifa especial disponible antes del 10 de Junio (Luego subirá a USD $25)';
+
+    }
+
+  }
+
+  // ── FAQ ──
+
+  function toggleFaq(btn) {
+
+    const item = btn.parentElement;
+
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+    if (!isOpen) item.classList.add('open');
+
+  }
+
+  // ── SCROLL REVEAL + PIXEL ViewContent ──
+
+  let viewContentFired = false; // Se dispara solo una vez por visita
+
+  const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(e => {
+
+      if (e.isIntersecting) {
+
+        e.target.classList.add('visible');
+
+        // ============================================================
+        // PÍXEL DE META — EVENTO: ViewContent
+        // Se dispara UNA SOLA VEZ cuando el video de la Clase #1
+        // entra en pantalla, indicando que el visitante vio el contenido
+        // del curso → señal de interés alto para Meta.
+        // ============================================================
+        if (e.target.id === 'lesson-preview-video' && !viewContentFired) {
+
+          viewContentFired = true;
+
+          fbq('track', 'ViewContent', {
+
+            content_name: 'Clase #1 — Vista previa Panadería en Casa',
+
+            content_category: 'Curso online',
+
+            content_type: 'product',
+
+            value: currentCurrency === 'COP' ? 70000 : 17,
+
+            currency: currentCurrency
+
+          });
+
+        }
+        // FIN PÍXEL — ViewContent
+
+        observer.unobserve(e.target);
+
+      }
+
+    });
+
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal, #lesson-preview-video').forEach(el => observer.observe(el));
+
+</script>
+
+<!-- ══════════════════════════════════════════════
+     SOCIAL PROOF NOTIFICATIONS
+══════════════════════════════════════════════ -->
+<style>
+  .notif-toast {
+    position: fixed;
+    left: 24px;
+    z-index: 9999;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #d4f5e2;
+    border: 1.5px solid #7dddb0;
+    border-radius: 14px;
+    padding: 12px 36px 12px 12px;
+    box-shadow:
+      0 6px 28px rgba(0,100,60,0.15),
+      0 2px 8px rgba(0,100,60,0.10);
+    min-width: 270px;
+    max-width: 320px;
+    will-change: transform, opacity;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    overflow: hidden;
+  }
+
+  .notif-toast::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    background: linear-gradient(180deg, #00B86E 0%, #00874f 100%);
+    border-radius: 14px 0 0 14px;
+  }
+
+  .notif-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    position: relative;
+  }
+
+  .notif-avatar .notif-badge {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 16px;
+    height: 16px;
+    background: #00B86E;
+    border-radius: 50%;
+    border: 2px solid #d4f5e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    line-height: 1;
+    color: #fff;
+  }
+
+  .notif-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .notif-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    color: #0d3d26;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .notif-action {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: #1a6040;
+    margin-top: 2px;
+    line-height: 1.35;
+  }
+
+  .notif-action strong {
+    color: #00874f;
+    font-weight: 700;
+  }
+
+  .notif-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    color: #3a8c62;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  .notif-close {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #3a8c62;
+    font-size: 14px;
+    line-height: 1;
+    padding: 2px 4px;
+    opacity: 0.55;
+    transition: opacity 0.2s;
+    font-family: sans-serif;
+  }
+  .notif-close:hover { opacity: 1; }
+
+  .notif-progress {
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00B86E, #00d480);
+    border-radius: 0 0 0 14px;
+    width: 100%;
+    transform-origin: left;
+    animation: notifProgress var(--travel-ms, 8000ms) linear forwards;
+  }
+
+  @keyframes notifProgress {
+    from { transform: scaleX(1); }
+    to   { transform: scaleX(0); }
+  }
+
+  @media (max-width: 480px) {
+    .notif-toast {
+      left: 12px;
+      right: 12px;
+      min-width: unset;
+      max-width: calc(100vw - 24px);
+    }
+  }
+</style>
+
+<script>
+(function() {
+  const NAMES = [
+    ['Valentina','Rodríguez'],['Santiago','Gómez'],['Daniela','Martínez'],
+    ['Sebastián','López'],['Camila','García'],['Mateo','Hernández'],
+    ['Isabella','Torres'],['Nicolás','Vargas'],['Sara','Ramírez'],
+    ['Andrés','Díaz'],['Alejandra','Moreno'],['Felipe','Jiménez'],
+    ['Mariana','Castro'],['Julián','Ruiz'],['Gabriela','Sánchez'],
+    ['David','Pérez'],['Laura','Reyes'],['Esteban','Muñoz'],
+    ['Natalia','González'],['Tomás','Álvarez'],['Paula','Rojas'],
+    ['Simón','Ortiz'],['Luciana','Herrera'],['Martín','Medina'],
+    ['Salomé','Aguilar'],['Juan Pablo','Suárez'],['Manuela','Acosta'],
+    ['Emilio','Ríos'],['Sofía','Pardo'],['Jerónimo','Mendoza'],
+    ['Lina','Mora'],['Carlos','Cárdenas'],['Verónica','Giraldo'],
+    ['Diego','Rincón'],['Ximena','Ospina'],['Alejandro','Varela'],
+    ['María Fernanda','Cifuentes'],['Luis Miguel','Arango'],
+    ['Claudia','Cardona'],['Óscar','Quintero'],['Yolanda','Serrano'],
+    ['Jhon','Pedraza'],['Catalina','Nieto'],['Rodrigo','Bernal'],
+    ['Adriana','Calderón'],['Rafael','Escobar'],['Pilar','Montoya'],
+    ['Germán','Castaño'],['Diana','Betancourt'],['Harold','Holguín'],
+    ['Tatiana','Correa'],['Iván','Flórez'],['Marcela','Palacios'],
+    ['Fernando','Zapata'],['Angie','Aristizábal'],['Jorge','Cano'],
+    ['Leidy','Zuluaga'],['Fabio','Ocampo'],['Ana Milena','Londoño'],
+    ['Mauricio','Bedoya'],['Paola','Urrego'],
+  ];
+
+  const MESSAGES = [
+    (n) => `<strong>${n}</strong> acaba de ver la primera clase 🥐`,
+    (n) => `<strong>${n}</strong> se unió a la comunidad ✨`,
+    (n) => `<strong>${n}</strong> acaba de comprar el curso 🎉`,
+    (n) => `<strong>${n}</strong> ya está aprendiendo hacer recetas 🍞`,
+    (n) => `<strong>${n}</strong> Está viendo lo mismo que tu en este momento 🔥`,
+  ];
+
+  const AVATAR_COLORS = [
+    'linear-gradient(135deg,#00B86E,#007a48)',
+    'linear-gradient(135deg,#00874f,#00d480)',
+    'linear-gradient(135deg,#009e5c,#00c472)',
+    'linear-gradient(135deg,#006e3e,#00B86E)',
+    'linear-gradient(135deg,#00c472,#007a48)',
+  ];
+
+  const INTERVALS = [35000, 120000, 50000, 65000, 80000, 300000];
+
+  const SPEED_PX_PER_S = 80;
+
+  function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  let queue = shuffleArray(NAMES.map((_, i) => i));
+  let queuePos = 0;
+
+  function getNextNameIndex() {
+    if (queuePos >= queue.length) {
+      queue = shuffleArray(NAMES.map((_, i) => i));
+      queuePos = 0;
+    }
+    return queue[queuePos++];
+  }
+
+  function timeAgo() {
+    const opts = [
+      'Hace un momento','Hace 1 minuto','Hace 2 minutos',
+      'Hace 1 Dia','Hace 5 minutos','Hace 1 Hora',
+    ];
+    return opts[Math.floor(Math.random() * opts.length)];
+  }
+
+  function showNotification() {
+    const idx = getNextNameIndex();
+    const [first, last] = NAMES[idx];
+    const fullName = `${first} ${last}`;
+    const initials = (first[0] + last[0]).toUpperCase();
+    const color = AVATAR_COLORS[idx % AVATAR_COLORS.length];
+    const msgFn = MESSAGES[Math.floor(Math.random() * MESSAGES.length)];
+
+    const TOAST_H = 80;
+    const vh = window.innerHeight;
+    const totalTravel = vh + TOAST_H + 20;
+    const travelMs = Math.round((totalTravel / SPEED_PX_PER_S) * 1000);
+
+    const toast = document.createElement('div');
+    toast.className = 'notif-toast';
+    toast.style.cssText = `top: ${vh + 10}px; --travel-ms: ${travelMs}ms;`;
+    toast.innerHTML = `
+      <div class="notif-avatar" style="background:${color}">
+        ${initials}
+        <span class="notif-badge">✓</span>
+      </div>
+      <div class="notif-body">
+        <div class="notif-name">${fullName}</div>
+        <div class="notif-action">${msgFn(fullName)}</div>
+        <div class="notif-time">⏱ ${timeAgo()}</div>
+      </div>
+      <button class="notif-close" aria-label="Cerrar">✕</button>
+      <div class="notif-progress"></div>
+    `;
+
+    document.body.appendChild(toast);     try {       const ctx = new (window.AudioContext || window.webkitAudioContext)();       const playTone = (freq, start, dur, vol) => {         const o = ctx.createOscillator();         const g = ctx.createGain();         o.connect(g); g.connect(ctx.destination);         o.type = 'sine'; o.frequency.value = freq;         g.gain.setValueAtTime(vol, ctx.currentTime + start);         g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + start + dur);         o.start(ctx.currentTime + start);         o.stop(ctx.currentTime + start + dur + 0.05);       };       playTone(880, 0,    0.15, 0.3);       playTone(1108, 0.15, 0.15, 0.25);       playTone(1320, 0.3,  0.25, 0.2);     } catch(e) {}
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => { toast.style.opacity = '1'; });
+    });
+
+    const startTime = performance.now();
+    const startTop = vh + 10;
+    const endTop = -TOAST_H - 20;
+
+    let killed = false;
+
+    function step(now) {
+      if (killed) return;
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / travelMs, 1);
+      const currentTop = startTop + (endTop - startTop) * progress;
+      toast.style.top = currentTop + 'px';
+
+      if (progress > 0.85) {
+        toast.style.opacity = String(1 - (progress - 0.85) / 0.15);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        toast.remove();
+      }
+    }
+
+    requestAnimationFrame(step);
+
+    toast.querySelector('.notif-close').addEventListener('click', () => {
+      killed = true;
+      toast.style.transition = 'opacity 0.3s';
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 320);
+    });
+
+    const nextDelay = INTERVALS[Math.floor(Math.random() * INTERVALS.length)];
+    setTimeout(showNotification, nextDelay);
+  }
+
+  const warmUp = 15000 + Math.random() * 5000;
+  setTimeout(showNotification, warmUp);
+})();
+</script>
+
+</body>
+
+</html>
